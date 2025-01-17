@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css  ">
+   <script>
+    let datos=[];
+    function clearFormData() {
+    const fields = [
+        'orden', 'actualculata', 'toceduraculata', 'finalculata', 'actualculata2', 
+        'alturafinalculata', 'torceduraculata2', 'repasoscandelas', 'camisas', 
+        'sangrearbuzos', 'gradas', 'rajaduras', 'dondeculata', 'mezcla', 
+        'pruebahidrostatica', 'guias', 'porqueguias', 'valvulas', 'porquevalvulas', 
+        'asientos', 'porqueasientos', 'cuantosex', 'cuantosin', 'actualblock', 
+        'ovalamientoblock', 'cilindros', 'tapones', 'inputdato', 'camisaculata', 
+        'rajadura', 'traecmisas', 'bancadafundida', 'actualbielas', 'finalbielas', 
+        'actualcentrales', 'finalcentrales', 'lateraldañado', 'mechero', 'donde', 
+        'actualejeslevas', 'salea', 'rectificaejeslevas', 'endondeejelevas', 
+        'rajado_ejes_levas', 'fundido_eje_levas', 'otros_levas', 'torcedurabielas', 
+        'cuantosbielas', 'ovalamientobielas', 'cuanto_bielas', 'presionbushin', 
+        'malas_cuantas','fundidasbielas','traecamisas'
+    ];
+
+    fields.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.value = '';
+        }
+    });
+
+    console.log('Todos los campos han sido limpiados.');
+}
+function agregardato(){
+    const nombre=document.getElementById('orden').value;
+    const torcedura=document.getElementById('inputdato').value;
+    const culata=document.getElementById('finalculata').value;
+    const valvulas=document.getElementById('valvulas').value;
+    const guias=document.getElementById('guias').value;
+    const cilindros=document.getElementById('cilindros').value;
+    const actualbielas=document.getElementById('actualbielas').value;
+    const finalbielas=document.getElementById('finalbielas').value;
+    const actualcentrales=document.getElementById('actualcentrales').value;
+    const finalcentrales=document.getElementById('finalcentrales').value;
+    if (nombre.trim()===''||torcedura.trim()===''||culata.trim()===''||valvulas.trim()===''||guias.trim()===''||cilindros.trim()===''||actualbielas.trim()===''||finalbielas.trim()===''||actualcentrales.trim()===''||finalcentrales.trim()===''){
+        alert('por favor, ingrese un dato valido.');
+        return;
+    }
+    const nuevodato={nombre,torcedura,culata,valvulas,guias,cilindros,actualbielas,finalbielas,actualcentrales,finalcentrales}
+    datos.push(nuevodato);
+    mostrardato();
+   //elimina los datos de la hoja en total
+           //culata
+}
+function mostrardato(){
+    const lista =document.getElementById('listadato');
+    lista.innerHTML='';
+    lista.innerHTML=`
+    <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>nombre</th>
+                    <th>torcedura</th>
+                    <th>altura final de la culata</th>
+                    <th>valvulas</th>
+                    <th>guias</th>
+                    <th>cilindros</th>
+                    <th>medida actual bielas</th>
+                    <th>medida final bielas</th>
+                    <th>medida actual centrales</th>
+                    <th>medida final centrales</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${datos.map((dato, index) => `
+                    <tr>
+                        <td>${index + 1}a</td>
+                        <td>${dato.nombre}</td>
+                        <td>${dato.torcedura}</td>
+                        <td>${dato.culata}</td>
+                        <td>${dato.valvulas}</td>
+                        <td>${dato.guias}</td>
+                        <td>${dato.cilindros}</td>
+                        <td>${dato.actualbielas}</td>
+                        <td>${dato.finalbielas}</td>
+                        <td>${dato.actualcentrales}</td>
+                        <td>${dato.finalcentrales}</td>
+                    </tr>
+                `).join('')}
+            </tbody>
+        </table>
+    `
+}
+   </script>
+</head>
+<body>
+    <div id="listadato">
+        <h3>
+            <p>no hay dato aun</p>
+        </h3>
+    </div>
+    <form id="mi formulario">
+
+        <div class="container-culata">
+            <img src="culatan.png" alt="culata">
+        </div>
+        <div class="container-culata-titulo">
+            
+            <label for="nombre1">ingrese su nombre </label>
+            <input type="text" name="nombre12" id="orden">
+            <h1>culata</h1>
+        </div>
+        <div class="container-tabla_culata">
+            <table>
+                <tr>
+                    <th>medida actual de la culata:</th>
+                    <th>torcedura</th>
+                    <th>medida final de la culata</th>
+                    <th>medida actual de la culata:</th>
+                    <th>torcedura</th>
+                    <th>medida final de la culata</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="actualculata">
+                            <option value="1">std</option>
+                            <option value="2">25</option>
+                            <option value="3">50</option>
+                            <option value="4">75</option>
+                            <option value="5">100</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" name="torceduraculata">
+                    </td>
+                    <td><select name="" id="finalculata">
+                        <option value="1">std</option>
+                        <option value="2">25</option>
+                        <option value="3">50</option>
+                        <option value="4">75</option>
+                        <option value="5">100</option>
+                    </select></td>
+                    <td>
+                        <select name="" id="actualculata2">
+                            <option value="1">std</option>
+                            <option value="2">25</option>
+                            <option value="3">50</option>
+                            <option value="4">75</option>
+                            <option value="5">100</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" name="torceduraculata2">
+                    </td>
+                    <td>
+                        <select name="" id="alturafinalculata">
+                            <option value="1">std</option>
+                            <option value="2">25</option>
+                            <option value="3">50</option>
+                            <option value="4">75</option>
+                            <option value="5">100</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="container-culata-datos">
+            <h2>trabajos</h2>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>cuantos repasos de candelas</th>
+                    <th>cuantas camisas</th>
+                    <th>sangrear buzos</th>
+                    <th>gradas</th>
+                    <th>rajaduras</th>
+                    <th>en donde:</th>
+                    <th>mezcla</th>
+                    <th>hacer prueba hodrostatica</th>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="text" name="repasoscandelas">
+                    </td>
+                    <td>
+                        <input type="text" name="camisas">
+                    </td>
+                    <td>
+                        <input type="text" name="sangrearbuzos">
+                    </td>
+                    <td>
+                        <select name="" id="gradas">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="" id="rajaduras">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="dondeculata">
+                    </td>
+                    <td>
+                        <select name="" id="mezcla">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="pruebahidrostatica">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>guias</th>
+                    <th>por que</th>
+                    <th>valvulas</th>
+                    <th>por que</th>
+                    <th>asientos</th>
+                    <th>por que</th>
+                    <th>cuanto ex</th>
+                    <th>cuanto in</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="guias">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="porqueguias">
+                    </td>
+                    <td>
+                        <select name="" id="valvulas">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="porquevalvulas">
+                    </td>
+                    <td>
+                        <select name="" id="asientos">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="porqueasientos">
+                    </td>
+                    <td>
+                        <input type="text" name="cuantosex">
+                    </td>
+                    <td>
+                        <input type="text" name="cuantosin">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="container-block">
+            <img src="block.png" alt="icono del block">
+        </div>
+        <div><h1>block</h1></div>
+        <div>
+            <table>
+                <tr>
+                    <th>medida actual</th>
+                    <th>ovalamiento en centecimas</th>
+                    <th>medida final</th>
+                    <th>tapones</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="actualblock">
+                            <option value="1">std</option>
+                            <option value="2">50</option>
+                            <option value="3">75</option>
+                            <option value="4">100</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" name="ovalamientoblock">
+                    </td>
+                    <td>
+                        <select name="" id="cilindros">
+                            <option value="1">std</option>
+                            <option value="2">50</option>
+                            <option value="3">75</option>
+                            <option value="4">100</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" name="tapones">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>torceduras(milecimas)</th>
+                    <th>camisas culata</th>
+                    <th>rajadura</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="inputdato"></td>
+                    <td><input type="text" name="camisasculata"></td>
+                    <td>
+                        <select name="" id="rajadura">
+                            <option value="1">adelante</option>
+                            <option value="2">atras </option>
+                            <option value="3">adelante y atras</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>trae camisas</th>
+                    <th>bancada fundida</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="traecamisas">
+                            <option value="1">si</option>
+                            <option value="1">no</option>
+                        </select>
+                        
+                    </td>
+                    <td>
+                        <select name="" id="bancadafundida">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="container-ejes">
+            <img src="ejes.png" alt="ejes">
+        </div>
+        <div>
+            <h1>ejes</h1>
+        </div>
+        <div>
+            <div>
+                <table>
+                    <tr>
+                        <th>medida actual de bielas</th>
+                        <th>medida final de la bielas</th>
+                        <th>medida actual centrales</th>
+                        <th>medida final  centrales</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="" id="actualbielas">
+                                <option value="1">std</option>
+                                <option value="2">25</option>
+                                <option value="3">50</option>
+                                <option value="4">75</option>
+                                <option value="5">100</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="" id="finalbielas">
+                                <option value="1">std</option>
+                                <option value="2">25</option>
+                                <option value="3">50</option>
+                                <option value="4">75</option>
+                                <option value="5">100</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="" id="actualcentrales">
+                                <option value="1">std</option>
+                                <option value="2">25</option>
+                                <option value="3">50</option>
+                                <option value="4">75</option>
+                                <option value="5">100</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="" id="finalcentrales">
+                                <option value="1">std</option>
+                                <option value="2">25</option>
+                                <option value="3">50</option>
+                                <option value="4">75</option>
+                                <option value="5">100</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>lateral dañado</th>
+                    <th>mechero</th>
+                    <th>donde</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="lateraldañado">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="" id="mechero">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="" id="donde">
+                            <option value="1">adelante</option>
+                            <option value="2">atras</option>.
+                            <option value="3">adelantre y atras</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="container-eje-levas">
+            <img src="ejedelevas.png" alt="icono">
+        </div>
+        <div>
+            <h1>ejes de levas</h1>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>medida actual</th>
+                    <th>sale a:</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="actualejeslevas">
+                            <option value="1">std</option>
+                            <option value="2">25</option>
+                            <option value="3">50</option>
+                            <option value="4">75</option>
+                            <option value="5">100</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="" id="salea">
+                            <option value="1">std</option>
+                            <option value="2">25</option>
+                            <option value="3">50</option>
+                            <option value="4">75</option>
+                            <option value="5">100</option>
+                        </select>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>se rectifica</th>
+                    <th>en donde</th>
+                    <th>rajado</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="rectificaejeslevas">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="endondeejeslevas">
+                    </td>
+                    <td>
+                        <select name="" id="rajado_ejes_levas">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>fundido</th>
+                    <th>otros</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="fundido_eje_levas">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="otros_levas">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="container-bielas">
+            <img src="bielas.png" alt="icono">
+        </div>
+        <div>
+            <h1>bielas</h1>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>torcedura</th>
+                    <th>cuantos</th>
+                    <th>fundidas</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="torcedurabielas">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="cuantosbielas">
+                    </td>
+                    <td>
+                        <select name="" id="fundidasbielas">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>ovalamienrto</th>
+                    <th>cuantos</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="" id="ovalamientobielas">
+                            <option value="1">si</option>
+                            <option value="2">no</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="cuanto_bielas">
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>
+                        presion de bushin
+                    </th>
+                    <th>
+                        cuantos
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="text" name="presionbushin">
+                    </td>
+                    <td>
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <th>malas</th>
+                    <th>cuantas</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="text" name="malas_cuantas">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <section id="botones">
+        <button type="button" onclick="clearFormData();" id="limpiar">limpiar formulario</button>
+        <button onclick="agregardato()" id="agregar">agregar dato</button>
+        <button id="captureButton">Capturar y Guardar</button>
+    </section>
+    
+    <!-- Librería html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        document.getElementById('captureButton').addEventListener('click', () => {
+            // Capturar el cuerpo de la página
+            html2canvas(document.body).then(canvas => {
+                // Convertir el canvas a un formato de imagen
+                const imageData = canvas.toDataURL('image/png');
+
+                // Crear un enlace dinámico para la descarga
+                const link = document.createElement('a');
+                link.href = imageData;
+                link.download = 'captura.png'; // Nombre predeterminado del archivo
+
+                // Simular el clic para abrir el diálogo de guardar
+                link.click();
+            });
+        });
+    </script>
+</body>
+</html>
