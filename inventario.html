@@ -102,172 +102,175 @@ function mostrardato(){
         </h3>
     </div>
     <form id="mi formulario">
-
-        <div class="container-culata">
-            <img src="culatan.png" alt="culata">
-        </div>
-        <div class="container-culata-titulo">
-            
-            <label for="nombre1">ingrese su nombre </label>
-            <input type="text" name="nombre12" id="orden">
-            <h1>culata</h1>
-        </div>
-        <div class="container-tabla_culata">
-            <table>
-                <tr>
-                    <th>medida actual de la culata:</th>
-                    <th>torcedura</th>
-                    <th>medida final de la culata</th>
-                    <th>medida actual de la culata:</th>
-                    <th>torcedura</th>
-                    <th>medida final de la culata</th>
-                </tr>
-                <tr>
-                    <td>
-                        <select name="" id="actualculata">
-                            <option value="1">std</option>
-                            <option value="2">25</option>
-                            <option value="3">50</option>
-                            <option value="4">75</option>
-                            <option value="5">100</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="number" name="torceduraculata">
-                    </td>
-                    <td><select name="" id="finalculata">
-                        <option value="1">std</option>
-                        <option value="2">25</option>
-                        <option value="3">50</option>
-                        <option value="4">75</option>
-                        <option value="5">100</option>
-                    </select></td>
-                    <td>
-                        <select name="" id="actualculata2">
-                            <option value="1">std</option>
-                            <option value="2">25</option>
-                            <option value="3">50</option>
-                            <option value="4">75</option>
-                            <option value="5">100</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="number" name="torceduraculata2">
-                    </td>
-                    <td>
-                        <select name="" id="alturafinalculata">
-                            <option value="1">std</option>
-                            <option value="2">25</option>
-                            <option value="3">50</option>
-                            <option value="4">75</option>
-                            <option value="5">100</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="container-culata-datos">
-            <h2>trabajos</h2>
-        </div>
-        <div>
-            <table>
-                <tr>
-                    <th>cuantos repasos de candelas</th>
-                    <th>cuantas camisas</th>
-                    <th>sangrear buzos</th>
-                    <th>gradas</th>
-                    <th>rajaduras</th>
-                    <th>en donde:</th>
-                    <th>mezcla</th>
-                    <th>hacer prueba hodrostatica</th>
-                </tr>
+        <div class="general_culata">
+            <div class="container-culata">
+                <img src="culatan.png" alt="culata">
+            </div>
+            <div class="container-culata-titulo">
                 
-                <tr>
-                    <td>
-                        <input type="text" name="repasoscandelas">
-                    </td>
-                    <td>
-                        <input type="text" name="camisas">
-                    </td>
-                    <td>
-                        <input type="text" name="sangrearbuzos">
-                    </td>
-                    <td>
-                        <select name="" id="gradas">
-                            <option value="1">si</option>
-                            <option value="2">no</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="" id="rajaduras">
-                            <option value="1">si</option>
-                            <option value="2">no</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="text" name="dondeculata">
-                    </td>
-                    <td>
-                        <select name="" id="mezcla">
-                            <option value="1">si</option>
-                            <option value="2">no</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="text" name="pruebahidrostatica">
-                    </td>
-                </tr>
-            </table>
+                <label for="nombre1">ingrese su nombre </label>
+                <input type="text" name="nombre12" id="orden">
+                <h1>culata</h1>
+            </div>
+            <!--ya esta declarado-->
+            <div class="container-tabla_culata">
+                <table>
+                    <tr>
+                        <th>medida actual de la culata:</th>
+                        <th>torcedura</th>
+                        <th>medida final de la culata</th>
+                        <th>medida actual de la culata:</th>
+                        <th>torcedura</th>
+                        <th>medida final de la culata</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="" id="actualculata">
+                                <option value="1">std</option>
+                                <option value="2">25</option>
+                                <option value="3">50</option>
+                                <option value="4">75</option>
+                                <option value="5">100</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" name="torceduraculata">
+                        </td>
+                        <td><select name="" id="finalculata">
+                            <option value="1">std</option>
+                            <option value="2">25</option>
+                            <option value="3">50</option>
+                            <option value="4">75</option>
+                            <option value="5">100</option>
+                        </select></td>
+                        <td>
+                            <select name="" id="actualculata2">
+                                <option value="1">std</option>
+                                <option value="2">25</option>
+                                <option value="3">50</option>
+                                <option value="4">75</option>
+                                <option value="5">100</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" name="torceduraculata2">
+                        </td>
+                        <td>
+                            <select name="" id="alturafinalculata">
+                                <option value="1">std</option>
+                                <option value="2">25</option>
+                                <option value="3">50</option>
+                                <option value="4">75</option>
+                                <option value="5">100</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--ya esta declarado-->
+            <div class="container-culata-datos">
+                <h2>trabajos</h2>
+            </div>
+            <div class="containerdatos2">
+                <table>
+                    <tr>
+                        <th>cuantos repasos de candelas</th>
+                        <th>cuantas camisas</th>
+                        <th>sangrear buzos</th>
+                        <th>gradas</th>
+                        <th>rajaduras</th>
+                        <th>en donde:</th>
+                        <th>mezcla</th>
+                        <th>hacer prueba hodrostatica</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="repasoscandelas">
+                        </td>
+                        <td>
+                            <input type="text" name="camisas">
+                        </td>
+                        <td>
+                            <input type="text" name="sangrearbuzos">
+                        </td>
+                        <td>
+                            <select name="" id="gradas">
+                                <option value="1">si</option>
+                                <option value="2">no</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="" id="rajaduras">
+                                <option value="1">si</option>
+                                <option value="2">no</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="dondeculata">
+                        </td>
+                        <td>
+                            <select name="" id="mezcla">
+                                <option value="1">si</option>
+                                <option value="2">no</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="pruebahidrostatica">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="containerdatos3">
+                <table>
+                    <tr>
+                        <th>guias</th>
+                        <th>por que</th>
+                        <th>valvulas</th>
+                        <th>por que</th>
+                        <th>asientos</th>
+                        <th>por que</th>
+                        <th>cuanto ex</th>
+                        <th>cuanto in</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="" id="guias">
+                                <option value="1">si</option>
+                                <option value="2">no</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="porqueguias">
+                        </td>
+                        <td>
+                            <select name="" id="valvulas">
+                                <option value="1">si</option>
+                                <option value="2">no</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="porquevalvulas">
+                        </td>
+                        <td>
+                            <select name="" id="asientos">
+                                <option value="1">si</option>
+                                <option value="2">no</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="porqueasientos">
+                        </td>
+                        <td>
+                            <input type="text" name="cuantosex">
+                        </td>
+                        <td>
+                            <input type="text" name="cuantosin">
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div>
-            <table>
-                <tr>
-                    <th>guias</th>
-                    <th>por que</th>
-                    <th>valvulas</th>
-                    <th>por que</th>
-                    <th>asientos</th>
-                    <th>por que</th>
-                    <th>cuanto ex</th>
-                    <th>cuanto in</th>
-                </tr>
-                <tr>
-                    <td>
-                        <select name="" id="guias">
-                            <option value="1">si</option>
-                            <option value="2">no</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="text" name="porqueguias">
-                    </td>
-                    <td>
-                        <select name="" id="valvulas">
-                            <option value="1">si</option>
-                            <option value="2">no</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="text" name="porquevalvulas">
-                    </td>
-                    <td>
-                        <select name="" id="asientos">
-                            <option value="1">si</option>
-                            <option value="2">no</option>
-                        </select>
-                    </td>
-                    <td>
-                        <input type="text" name="porqueasientos">
-                    </td>
-                    <td>
-                        <input type="text" name="cuantosex">
-                    </td>
-                    <td>
-                        <input type="text" name="cuantosin">
-                    </td>
-                </tr>
-            </table>
-        </div>
+  <!--ya esta declarado-->
         <div class="container-block">
             <img src="block.png" alt="icono del block">
         </div>

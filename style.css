@@ -1,3 +1,8 @@
+/*{
+    padding: 0px;
+    margin: 0px;
+    font-family: centure gothic;
+}
 body{
     background-color: red;
 }
@@ -75,38 +80,138 @@ td {
     background-color: #f2f2f2;
 }
 /*aca inicia el estilop del boton*/
-#botones {
+/*#botones {
     display: flex;            /* Activar Flexbox */
-    justify-content: center;  /* Centrar horizontalmente */
-    align-items: center;      /* Centrar verticalmente */
-    gap: 15px;                /* Espaciado entre botones */
-    height: 20vh;            /* Ocupa toda la altura de la pantalla */
-    margin-top: 50px;
-    background-color: red; /* Fondo claro */
-}
+  /*  justify-content: center;  /* Centrar horizontalmente */
+    /*align-items: center;      /* Centrar verticalmente */
+    /*gap: 15px;                /* Espaciado entre botones */
+   /* height: 20vh;            /* Ocupa toda la altura de la pantalla */
+/*    margin-top: 50px;
+ /*   background-color: red; /* Fondo claro */
+/*}
 
 /* Estilo de los botones */
-#botones button {
-    padding: 10px 20px;       /* Espaciado interno */
-    font-size: 16px;          /* Tamaño de letra */
-    background-color: #007BFF; /* Fondo azul */
-    color: white;             /* Texto blanco */
-    border: none;             /* Sin borde */
-    border-radius: 5px;       /* Bordes redondeados */
-    cursor: pointer;          /* Cursor de mano al pasar */
-    transition: background-color 0.3s ease; /* Animación suave */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+/*#botones button {
+    padding: 10px 20px;      
+    font-size: 16px;          /* T
+    background-color: #007BFF;
+    color: white;             /
+    border: none;           
+    border-radius: 5px;       /* Bord
+    cursor: pointer;          /* Cursor de
+    transition: background-color 0.3s ease; /* A
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /
 }
 
 /* Cambio de color al pasar el mouse */
-#botones button:hover {
+/*#botones button:hover {
     background-color: #0056b3;
 }
 
 /* Para pantallas pequeñas: ajuste vertical */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
     #botones {
         flex-direction: column; /* Los botones se apilan verticalmente */
-        gap: 10px;              /* Espaciado reducido */
+/*        gap: 10px;              /* Espaciado reducido */
+/*    }
+}
+*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#listadato {
+    padding: 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-culata,
+.container-culata-titulo,
+.container-tabla_culata,
+.container-culata-datos,
+.containerdatos2,
+.containerdatos3,
+.general_culata,
+.container-block,
+.container-ejes,
+.container-eje-levas,
+.container-trabajos2,
+.container_trabajos,
+.container-bielas {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    table, th, td {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    table, th, td {
+        font-size: 12px;
+    }
+
+    form {
+        padding: 5px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px 15px;
     }
 }
